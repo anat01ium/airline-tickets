@@ -45,6 +45,46 @@
 		</nav>
 	</header>
 
+	<main class="main">
+		<h1 class="slogan">Лучшие авиабилеты по самым низким ценам</h1>
+
+		<form class="search">
+			<div class="ticket-type">
+				<button class="ticket-type__button--active">Авиабилеты</button>
+				<button class="ticket-type__button">Ж/д билеты</button>
+				<button class="ticket-type__button">Автобусы</button>
+				<button class="ticket-type__button">Отели</button>
+				<button class="ticket-type__button">Страхование</button>
+			</div>
+
+			<div class="search__filters">
+				<div class="search__route">
+					<label for="departure">Откуда</label>
+					<input class="search__input" id="departure" type="text" name="from" value="Варшава">
+
+					<label for="destination">Куда</label>
+					<input class="search__input" id="destination" type="text" name="to" value="">
+
+					<button class="search__swap-route-button" type="button">Переключить направление</button>
+				</div>
+
+				<div class="search__date">
+					<label for="departure-date">Туда</label>
+					<input class="search__input" id="departure-date" type="date">
+
+					<label for="return-date">Обратно</label>
+					<input class="search__input" id="return-date" type="date">
+				</div>
+
+				<input class="search__passangers-class-button" type="button" value="1 пассажир, любой">
+
+				<button class="search__find-button" type="submit">Найти</button>
+			</div>
+
+			<button class="search__route-mode-button" type="button">Сложный маршрут</button>
+		</form>
+	</main>
+
 	<script defer src="js/index.js"></script>
 </body>
 
