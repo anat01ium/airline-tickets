@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Бронирование авиабилетов</title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
-	<body>
-		<script src="js/index.js"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Бронирование авиабилетов</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<a class="logo" href="./"><img class="logo__img" src="#" alt="Logo"></a>
+
+		<nav class="nav">
+			<ul class="menu">
+				<li class="menu__item"><a class="menu__link" href="#">Корпоративным клиентам</a></li>
+
+				<li class="menu__item">
+					<select class="ticket-type-select">
+						<option class="ticket-type-select__item" value="avia">Авиабилеты</option>
+						<option class="ticket-type-select__item" value="rail">Ж/д билеты</option>
+						<option class="ticket-type-select__item" value="bus">Автобусы</option>
+						<option class="ticket-type-select__item" value="hotel">Отели</option>
+						<option class="ticket-type-select__item" value="insurance">Страхование</option>
+					</select>
+				</li>
+
+				<li class="menu__item">Справка
+					<ul class="sub-menu">
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Частые вопросы (FAQ)</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Техничексая справка</a></li>
+					</ul>
+				</li>
+
+				<li class="menu__item">
+					<select class="lang-select">
+						<option class="lang-select__item" value="ru">Русский</option>
+						<option class="lang-select__item" value="en">English</option>
+					</select>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<script defer src="js/index.js"></script>
+</body>
+
 </html>
