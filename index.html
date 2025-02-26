@@ -1,12 +1,350 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Бронирование авиабилетов</title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
-	<body>
-		<script src="js/index.js"></script>
-	</body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Бронирование авиабилетов</title>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<a class="logo" href="./"><img class="logo__img" src="#" alt="Logo"></a>
+
+		<nav class="nav">
+			<ul class="menu">
+				<li class="menu__item"><a class="menu__link" href="#">Корпоративным клиентам</a></li>
+
+				<li class="menu__item">
+					<select class="ticket-type-select">
+						<option class="ticket-type-select__item" value="avia">Авиабилеты</option>
+						<option class="ticket-type-select__item" value="rail">Ж/д билеты</option>
+						<option class="ticket-type-select__item" value="bus">Автобусы</option>
+						<option class="ticket-type-select__item" value="hotel">Отели</option>
+						<option class="ticket-type-select__item" value="insurance">Страхование</option>
+					</select>
+				</li>
+
+				<li class="menu__item">Справка
+					<ul class="sub-menu">
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Частые вопросы (FAQ)</a></li>
+						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Техничексая справка</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<select class="lang-select">
+				<option class="lang-select__item" value="ru">Русский</option>
+				<option class="lang-select__item" value="en">English</option>
+			</select>
+		</nav>
+	</header>
+
+	<main class="main">
+		<h1 class="slogan">Лучшие авиабилеты по самым низким ценам</h1>
+
+		<form class="search">
+			<div class="ticket-type">
+				<a class="ticket-type__link--active" href="./">Авиабилеты</a>
+				<a class="ticket-type__link" href="#">Ж/д билеты</a>
+				<a class="ticket-type__link" href="#">Автобусы</a>
+				<a class="ticket-type__link" href="#">Отели</a>
+				<a class="ticket-type__link" href="#">Страхование</a>
+			</div>
+
+			<div class="search__filters">
+				<div class="search__route">
+					<label for="departure">Откуда</label>
+					<input class="search__input" id="departure" type="text" name="from" value="Варшава">
+
+					<label for="destination">Куда</label>
+					<input class="search__input" id="destination" type="text" name="to" value="">
+
+					<button class="search__swap-route-button" type="button">Переключить направление</button>
+				</div>
+
+				<div class="search__date">
+					<label for="departure-date">Туда</label>
+					<input class="search__input" id="departure-date" type="date">
+
+					<label for="return-date">Обратно</label>
+					<input class="search__input" id="return-date" type="date">
+				</div>
+
+				<button class="search__passangers-class-button" type="button">1 пассажир, любой</button>
+				<button class="search__find-button" type="submit">Найти</button>
+			</div>
+
+			<button class="search__route-mode-button" type="button">Сложный маршрут</button>
+		</form>
+	</main>
+
+	<aside class="info telegram-info">
+		<h2 class="info__title">Управляйте вашими билетами в Telegram</h2>
+
+		<ul class="info-list">
+			<li class="info-list__item">Доступ к билетам и кабинету</li>
+			<li class="info-list__item">Агентская поддержка</li>
+			<li class="info-list__item">FAQ</li>
+		</ul>
+
+		<a class="info__link" href="#">Посмотреть возможности</a>
+	</aside>
+
+	<aside class="info bus-tickets-info">
+		<h2 class="info__title">Билеты на автобус по Китаю и Европе</h2>
+
+		<ul class="info-list">
+			<li class="info-list__item">Удобное сравнение цен</li>
+			<li class="info-list__item">Актуальное расписание</li>
+		</ul>
+
+		<a class="info__link" href="#">Найти билеты</a>
+	</aside>
+
+	<section class="section popular">
+		<h2 class="section__title">Популярные направления</h2>
+
+		<ul class="routes">
+			<li class="routes__item"><span class="routes__name">Варшава → Милан</span><span class="routes__price">от 771</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Лондон</span><span class="routes__price">от 1 001</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Аликанте</span><span class="routes__price">от 1 424</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Мадрид</span><span class="routes__price">от 1 646</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Барселона</span><span class="routes__price">от 1 663</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Амстердам</span><span class="routes__price">от 3 256</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Лиссабон</span><span class="routes__price">от 3 364</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Париж</span><span class="routes__price">от 4 077</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Нью-Йорк</span><span class="routes__price">от 21 277</span></li>
+			<li class="routes__item"><span class="routes__name">Варшава → Денпасар-Бали</span><span class="routes__price">от 25 573</span></li>
+		</ul>
+	</section>
+
+	<aside class="section top-airlines">
+		<div class="top-airline__heading">
+			<h2 class="section__title">Топ-10 авиакомпаний</h2>
+			<a class="top-airline__more" href="#">Подробнее</a>
+		</div>
+
+		<ul class="airlines">
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">1</span>Эмирейтс</a>
+				<span class="airlines__rating">4.7</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">2</span>Катар Эйрвейз</a>
+				<span class="airlines__rating">4.7</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">3</span>Тюркиш Эрлайнз</a>
+				<span class="airlines__rating">4.7</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">4</span>Сингапур Эйрлайнз</a>
+				<span class="airlines__rating">4.7</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">5</span>Кореан Эйр</a>
+				<span class="airlines__rating">4.7</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">6</span>Этихад Эйрвэйз</a>
+				<span class="airlines__rating">4.6</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">7</span>Катай Пасифик</a>
+				<span class="airlines__rating">4.5</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">8</span>Эйр Астана</a>
+				<span class="airlines__rating">4.5</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">9</span>Верджин Атлантик Эйрвэйз</a>
+				<span class="airlines__rating">4.5</span>
+			</li>
+			<li class="airlines__item">
+				<a class="airlines__link" href="#"><span class="airline__rank">10</span>Эйр Нью Зиланд</a>
+				<span class="airlines__rating">4.5</span>
+			</li>
+		</ul>
+	</aside>
+
+	<section class="section info">
+		<h2 class="section__title">Горящие распродажи авиарейсов</h2>
+
+		<div class="info__container">
+			<h3 class="info__title">Как найти авиабилеты со скидкой онлайн</h3>
+			<p class="info__text">На нашем сайте вы можете купить билеты на самолет или оформить раннее бронирование. Акции, скидки и специальные предложения, которые постоянно предлагают ведущие авиакомпании-лоукостеры, позволяют приобрести недорогие авиабилеты не выходя из дома. Если хотите сэкономить и купить авиабилеты дешевле, обратите внимание на рейсы с пересадками. А вот время - как драгоценную валюту для путешественника - помогают сэкономить прямые перелеты, пусть они и стоят дороже билетов с пересадками.</p>
+
+			<h3 class="info__title">Клиентская поддержка</h3>
+			<p class="info__text">Какой билет заказать для ребенка? Где внести данные о визе? Можно ли поменять даты вылета? Как оформить дополнительный багаж? Операторы нашей службы поддержки знают ответы на все вопросы о перелетах. Мы сопровождаем ваши бронирования в режиме 24/7/365, на украинском, русском и английском языках. Всегда поможем подобрать, оплатить или внести изменения в билет быстро и удобно! С помощью удобного поиска сделать заказ авиабилетов по интернету можно дешево и безопасно.</p>
+
+			<h3 class="info__title">Бонусная программа для постоянных клиентов</h3>
+			<p class="info__text">За покупку авиабилетов на нашем сайте вы получите бонусы – 1% от суммы транзакции. Накопив достаточное количество баллов, можно оплатить ими билеты на самолет при следующих покупках. Максимальная скидка, которую можно получить благодаря бонусной программе, – 25%.</p>
+
+			<h3 class="info__title">Самые дешевые авиабилеты</h3>
+			<p class="info__text">Как и где купить авиабилеты дешево? Сотрудничество с 750 авиакомпаниями позволяет нам формировать гибкие тарифы и предлагать нашим клиентам лучшие условия. Наш сайт-агрегатор авиарейсов оперативно обрабатывает ваши запросы и выдает все доступные варианты. Вы можете воспользоваться фильтрами и отсортировать предложения по перевозчикам, времени вылета и другим параметрам.</p>
+
+			<h3 class="info__title">Сравнение цен на авиабилеты</h3>
+			<p class="info__text">У нас всегда можно забронировать очень дешевые авиабилеты по Украине, Европе и в другие части мира. Наша система динамики цен определит лучшее время для покупки, а также подскажет высокий и низкий сезон для путешествий по тем или иным маршрутам.</p>
+		</div>
+	</section>
+
+	<aside class="section questions">
+		<h2 class="section__title">Частые вопросы</h2>
+
+		<ul class="faq">
+			<li class="faq__item"><a class="faq__link" href="#">Как забронировать авиабилет</a></li>
+			<li class="faq__item"><a class="faq__link" href="#">Как оплатить авиабилет</a></li>
+			<li class="faq__item"><a class="faq__link" href="#">Как зарегистрироваться на рейс</a></li>
+			<li class="faq__item"><a class="faq__link" href="#">Как вернуть авиабилет</a></li>
+			<li class="faq__item"><a class="faq__link" href="#">Бонусная программа</a></li>
+			<li class="faq__item"><a class="faq__link" href="#">Все темы</a></li>
+		</ul>
+	</aside>
+
+	<aside class="subscribe">
+		<h2 class="subcribe__title">Лучшие предложения для путешествий</h2>
+
+		<form class="subcribe-form">
+			<label class="subscribe-form__label" for="subscribe-email">Email</label>
+			<input class="subscribe-form__input" id="subscribe-email" type="email">
+
+			<button class="subscribe-form__button" type="submit">Подписаться</button>
+		</form>
+	</aside>
+
+	<footer class="footer">
+		<div class="partners">
+			<img class="partners__img" src="#" alt="Accredited Agent logo">
+			<img class="partners__img" src="#" alt="Securiy Standards Council logo">
+			<img class="partners__img" src="#" alt="Visa logo">
+			<img class="partners__img" src="#" alt="Mastercard logo">
+		</div>
+
+		<div class="chart">
+			<div class="chart__item">
+				<h3 class="chart__title">Страны</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Испания</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Турция</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Египет</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Грузия</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Польша</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Франция</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Все страны</a>
+			</div>
+
+			<div class="chart__item">
+				<h3 class="chart__title">Города</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Кишинев</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Дубаи</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Варшава</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Прага</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Париж</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Франкфурт</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Все города</a>
+			</div>
+
+			<div class="chart__item">
+				<h3 class="chart__title">Направления</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Кишинев - Стамбул</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Кишинев - Анталия</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Варшава - Торонто</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Варшава - Париж</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Кишинев - Тбилиси</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Варшава - Стамбул</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Все направления</a>
+			</div>
+
+			<div class="chart__item">
+				<h3 class="chart__title">Аэропорты</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Ф. Шопен (Варшава)</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Франкфурт Интернешнл (Франфурт)</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Аеропорт Кишинев (Кишинев)</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Фиумичино (Рим)</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Аэропорт Стамбула (Стамбул)</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Шарль Де Голль (Париж)</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Все аэропорты</a>
+			</div>
+
+			<div class="chart__item">
+				<h3 class="chart__title">Авиакомпании</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Тюркиш Эрлайнз</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Wizz Air Украина</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Qatar Airways</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Ryanair</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Air Baltic</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Все авиакомпании</a>
+			</div>
+
+			<div class="chart__item">
+				<h3 class="chart__title">Наши сервисы</h3>
+
+				<ul class="chart-list">
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Рейтинг авиакомпаний</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Сравнение цен</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Расписание рейсов</a></li>
+					<li class="chart-list__item"><a class="chart-list__link" href="#">Акции</a></li>
+				</ul>
+
+				<a class="chart__link" href="#">Карта сайта</a>
+			</div>
+		</div>
+	
+		<div class="contacts">
+			<a class="partner" href="#">Партнёрская программа</a>
+
+			<div class="apps">
+				<a class="apps__link" href="#"><img class="apps__img" src="#" alt="Google Play logo"></a>
+				<a class="apps__link" href="#"><img class="apps__img" src="#" alt="App Store logo"></a>
+			</div>
+
+			<ul class="social">
+				<li class="social__item">
+					<a class="social__link" href="#">
+						<img class="social__img" src="#" alt="Facebook logo">
+					</a>
+				</li>
+
+				<li class="social__item">
+					<a class="social__link" href="#">
+						<img class="social__img" src="#" alt="Instagram logo">
+					</a>
+				</li>
+
+				<li class="social__item">
+					<a class="social__link" href="#">
+						<img class="social__img" src="#" alt="Telegram logo">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+	<script defer src="js/index.js"></script>
+</body>
+
 </html>
