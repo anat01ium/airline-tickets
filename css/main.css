@@ -48,6 +48,7 @@ button, select {
 
 .nav {
 	display: flex;
+	margin-right: 1.4rem;
 }
 
 .menu {
