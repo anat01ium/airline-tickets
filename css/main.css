@@ -5,7 +5,7 @@ html {
 	box-sizing: border-box;
 }
 
-*, :after, :before {
+*, ::after, ::before {
 	box-sizing: inherit;
 }
 
@@ -16,6 +16,105 @@ html {
 	line-height: 1;
 }
 
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
 button, select {
 	background-color: transparent;
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 1.23em 0;
+	font-size: 1.3rem;
+	background-color: var(--color-brand-primary);
+}
+
+.header__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav {
+	display: flex;
+}
+
+.menu {
+	display: flex;
+}
+
+.menu__item > :first-child {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding: 0 1.54em;
+	border-radius: 3.077em;
+	color: var(--color-text-tertiary);
+}
+
+.menu__item > :first-child:hover {
+	background-color: var(--color-brand-secondary);
+}
+
+.menu__button::after {
+	content: url("../assets/svg/bullet.svg");
+	height: 1.385em;
+	margin-left: 0.5em;
+}
+
+.sub-menu {
+	display: none;
+}
+
+.lang {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: 3.077em;
+}
+
+.lang:hover {
+	background-color: var(--color-brand-secondary);
+}
+
+.lang::before {
+	position: absolute;
+	left: 1.54em;
+	content: url("../assets/svg/lang.svg");
+	cursor: pointer;
+}
+
+.lang::after {
+	position: absolute;
+	right: 1.54em;
+	content: url("../assets/svg/bullet.svg");
+	height: 1.385em;
+	cursor: pointer;
+}
+
+.lang__select {
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	padding-left: calc(1.54em + 0.5em + 20px);
+	padding-right: calc(1.54em + 0.5em + 5px);
+	border-radius: 3.077em;
+	color: var(--color-text-tertiary);
+	appearance: none;
+	outline: none;
+}
+
+.lang__item {
+	color: initial;
 }

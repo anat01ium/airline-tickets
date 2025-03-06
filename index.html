@@ -12,35 +12,66 @@
 
 <body>
 	<header class="header">
-		<a class="logo" href="./"><img class="logo__img" src="#" alt="Logo"></a>
+		<div class="container header__container">
+			<a class="logo" href="./">
+				<img class="logo__img" width="120" height="36" src="./assets/svg/tickets-slogan.svg" alt="Logo">
+			</a>
 
-		<nav class="nav">
-			<ul class="menu">
-				<li class="menu__item"><a class="menu__link" href="#">Корпоративным клиентам</a></li>
+			<nav class="nav">
+				<ul class="menu">
+					<li class="menu__item">
+						<a class="menu__link" href="#">Корпоративным клиентам</a>
+					</li>
 
-				<li class="menu__item">
-					<select class="ticket-type-select">
-						<option class="ticket-type-select__item" value="avia">Авиабилеты</option>
-						<option class="ticket-type-select__item" value="rail">Ж/д билеты</option>
-						<option class="ticket-type-select__item" value="bus">Автобусы</option>
-						<option class="ticket-type-select__item" value="hotel">Отели</option>
-						<option class="ticket-type-select__item" value="insurance">Страхование</option>
+					<li class="menu__item">
+						<button class="menu__button">Авиабилеты</button>
+
+						<ul class="sub-menu">
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Авиабилеты</a>
+							</li>
+
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Ж/д билеты</a>
+							</li>
+
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Автобусы</a>
+							</li>
+
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Отели</a>
+							</li>
+
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Страхование</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu__item">
+						<button class="menu__button">Справка</button>
+
+						<ul class="sub-menu">
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Частые вопросы (FAQ)</a>
+							</li>
+
+							<li class="sub-menu__item">
+								<a href="#" class="sub-menu__link">Техничексая справка</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<div class="lang">
+					<select class="lang__select">
+						<option class="lang__item" value="ru">Русский</option>
+						<option class="lang__item" value="en">English</option>
 					</select>
-				</li>
-
-				<li class="menu__item">Справка
-					<ul class="sub-menu">
-						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Частые вопросы (FAQ)</a></li>
-						<li class="sub-menu__item"><a href="#" class="sub-menu__link">Техничексая справка</a></li>
-					</ul>
-				</li>
-			</ul>
-
-			<select class="lang-select">
-				<option class="lang-select__item" value="ru">Русский</option>
-				<option class="lang-select__item" value="en">English</option>
-			</select>
-		</nav>
+				</div>
+			</nav>
+		</div>
 	</header>
 
 	<main class="main">
