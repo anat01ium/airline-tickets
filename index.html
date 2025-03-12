@@ -75,42 +75,56 @@
 	</header>
 
 	<main class="main">
-		<h1 class="slogan">Лучшие авиабилеты по самым низким ценам</h1>
+		<div class="container">
+			<h1 class="slogan">Лучшие авиабилеты по самым низким ценам</h1>
 
-		<form class="search">
 			<div class="ticket-type">
-				<a class="ticket-type__link--active" href="./">Авиабилеты</a>
+				<a class="ticket-type__link ticket-type__link--active" href="./">Авиабилеты</a>
 				<a class="ticket-type__link" href="#">Ж/д билеты</a>
 				<a class="ticket-type__link" href="#">Автобусы</a>
-				<a class="ticket-type__link" href="#">Отели</a>
+				<a class="ticket-type__link ticket-type__link--sale" href="#">Отели <span class="ticket-type__sale">-60%</span></a>
 				<a class="ticket-type__link" href="#">Страхование</a>
 			</div>
 
-			<div class="search__filters">
-				<div class="search__route">
-					<label for="departure">Откуда</label>
-					<input class="search__input" id="departure" type="text" name="from" value="Варшава">
+			<form class="search">
+				<div class="search__filters">
+					<div class="search__route">
+						<div class="search__input-box">
+							<input class="search__input" id="departure" type="text" name="from" placeholder=" " value="Варшава">
+							<label class="search__label" for="departure">Откуда</label>
+						</div>
 
-					<label for="destination">Куда</label>
-					<input class="search__input" id="destination" type="text" name="to" value="">
+						<div class="search__input-box">
+							<input class="search__input" id="destination" type="text" name="to" placeholder=" ">
+							<label class="search__label" for="destination">Куда</label>
+						</div>
 
-					<button class="search__swap-route-button" type="button">Переключить направление</button>
+						<button class="search__swap-route-button" type="button">Переключить направление</button>
+					</div>
+
+					<div class="search__dates">
+						<button class="search__input-box search__date-departure-button" type="button">
+							<span class="search__label">Туда</span>
+							<span class="search__input"></span>
+						</button>
+
+						<button class="search__input-box search__date-return-button" type="button">
+							<span class="search__label">Обратно</span>
+							<span class="search__input"></span>
+						</button>
+					</div>
+
+					<button class="search__input-box search__passangers-class-button" type="button">
+						<span class="search__input">1 пассажир, любой</span>
+						<span class="search__label">Пассажиры, класс</span>
+					</button>
 				</div>
 
-				<div class="search__date">
-					<label for="departure-date">Туда</label>
-					<input class="search__input" id="departure-date" type="date">
-
-					<label for="return-date">Обратно</label>
-					<input class="search__input" id="return-date" type="date">
-				</div>
-
-				<button class="search__passangers-class-button" type="button">1 пассажир, любой</button>
 				<button class="search__find-button" type="submit">Найти</button>
-			</div>
 
-			<button class="search__route-mode-button" type="button">Сложный маршрут</button>
-		</form>
+				<button class="search__route-mode-button" type="button">Сложный маршрут</button>
+			</form>
+		</div>
 	</main>
 
 	<aside class="info telegram-info">
