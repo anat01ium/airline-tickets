@@ -49,6 +49,10 @@ button, select, input[type="button"] {
 	justify-content: space-between;
 }
 
+.logo__img {
+	object-fit: contain;
+}
+
 .nav {
 	display: flex;
 	margin-right: 1.4rem;
