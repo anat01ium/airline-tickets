@@ -181,7 +181,7 @@ button, select, input[type="button"] {
 .search {
 	display: grid;
 	margin-top: 1em;
-	margin-bottom: 2.4em;
+	margin-bottom: 5em;
 	grid-template-columns: auto 138px;
 	gap: 1.6rem 1rem;
 }
