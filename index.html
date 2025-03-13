@@ -12,12 +12,12 @@
 
 <body>
 	<header class="header">
-		<div class="container header__container">
-			<a class="logo" href="./">
-				<img class="logo__img" width="120" height="36" src="./assets/svg/tickets-slogan.svg" alt="Logo">
-			</a>
-
+		<div class="container">
 			<nav class="nav">
+				<a class="logo" href="./">
+					<img class="logo__img" width="120" height="36" src="./assets/svg/tickets-slogan.svg" alt="Logo">
+				</a>
+
 				<ul class="menu">
 					<li class="menu__item">
 						<a class="menu__link" href="#">Корпоративным клиентам</a>
@@ -71,11 +71,7 @@
 					</select>
 				</div>
 			</nav>
-		</div>
-	</header>
 
-	<main class="main">
-		<div class="container">
 			<h1 class="slogan">Лучшие авиабилеты по самым низким ценам</h1>
 
 			<div class="ticket-type">
@@ -125,29 +121,31 @@
 				<button class="search__route-mode-button" type="button">Сложный маршрут</button>
 			</form>
 		</div>
-	</main>
+	</header>
 
-	<aside class="info telegram-info">
-		<h2 class="info__title">Управляйте вашими билетами в Telegram</h2>
+	<aside class="banners container">
+		<article class="banner telegram card">
+			<h2 class="banner__title">Управляйте вашими билетами в Telegram</h2>
 
-		<ul class="info-list">
-			<li class="info-list__item">Доступ к билетам и кабинету</li>
-			<li class="info-list__item">Агентская поддержка</li>
-			<li class="info-list__item">FAQ</li>
-		</ul>
+			<ul class="banner-list">
+				<li class="banner-list__item">Доступ к билетам и кабинету</li>
+				<li class="banner-list__item">Агентская поддержка</li>
+				<li class="banner-list__item">FAQ</li>
+			</ul>
 
-		<a class="info__link" href="#">Посмотреть возможности</a>
-	</aside>
+			<a class="banner__link banner__link--alt" href="#">Посмотреть возможности</a>
+		</article>
 
-	<aside class="info bus-tickets-info">
-		<h2 class="info__title">Билеты на автобус по Китаю и Европе</h2>
+		<article class="banner bus-tickets card">
+			<h2 class="banner__title">Билеты на автобус по Китаю и Европе</h2>
 
-		<ul class="info-list">
-			<li class="info-list__item">Удобное сравнение цен</li>
-			<li class="info-list__item">Актуальное расписание</li>
-		</ul>
+			<ul class="banner-list">
+				<li class="banner-list__item">Удобное сравнение цен</li>
+				<li class="banner-list__item">Актуальное расписание</li>
+			</ul>
 
-		<a class="info__link" href="#">Найти билеты</a>
+			<a class="banner__link" href="#">Найти билеты</a>
+		</article>
 	</aside>
 
 	<section class="section popular">
