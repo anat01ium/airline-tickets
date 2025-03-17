@@ -1,29 +1,30 @@
 :root {
-	--color-brand-primary: rgba(116, 19, 221, 1.0);
-	--color-brand-secondary: rgba(136, 83, 221, 1.0);
-	--color-brand-tertiary: rgba(208, 209, 251, 1.0);
+	--color-brand-primary: rgba(116, 19, 221, 1);
+	--color-brand-secondary: rgba(136, 83, 221, 1);
+	--color-brand-tertiary: rgba(208, 209, 251, 1);
 
-	--color-accent-primary: rgba(247, 64, 104, 1.0);
-	--color-accent-secondary: rgba(255, 169, 188, 1.0);
-	--color-accent-tertiary: rgba(255, 232, 237, 1.0);
+	--color-accent-primary: rgba(247, 64, 104, 1);
+	--color-accent-secondary: rgba(255, 169, 188, 1);
+	--color-accent-tertiary: rgba(255, 232, 237, 1);
 
-	--color-ui-primary: rgba(255, 255, 255, 1.0);
-	--color-ui-secondary: rgba(239, 241, 244, 1.0);
-	--color-ui-tertiary: rgb(166, 172, 177, 1.0);
-	--color-ui-ok: rgba(114, 182, 43, 1.0);
-	--color-ui-danger: rgba(255, 82, 82, 1.0);
+	--color-ui-primary: rgba(255, 255, 255, 1);
+	--color-ui-secondary: rgba(239, 241, 244, 1);
+	--color-ui-tertiary: rgba(166, 172, 177, 1);
+	--color-ui-ok: rgba(114, 182, 43, 1);
+	--color-ui-danger: rgba(255, 82, 82, 1);
 
-	--color-text-primary: rgba(33, 47, 61, 1.0);
-	--color-text-secondary: rgba(122, 130, 139, 1.0);
-	--color-text-tertiary: rgb(166, 172, 177, 1.0);
-	--color-text-link: rgba(58, 146, 248, 1.0);
-	--color-text-danger: rgba(255, 82, 82, 1.0);
+	--color-text-primary: rgba(33, 47, 61, 1);
+	--color-text-secondary: rgba(122, 130, 139, 1);
+	--color-text-tertiary: rgba(166, 172, 177, 1);
+	--color-text-link: rgba(58, 146, 248, 1);
+	--color-text-danger: rgba(255, 82, 82, 1);
 
-	--color-border-primary: rgba(211, 213, 216, 1.0);
+	--color-border-primary: rgba(211, 213, 216, 1);
+	--color-border-secondary: rgba(232, 234, 235, 1);
 
-	--highlight-accent-primary: rgba(255, 97, 131, 1.0);
+	--highlight-accent-primary: rgba(255, 97, 131, 1);
 
-	--dim-ui-primary: rgba(249, 249, 249, 1.0);
+	--dim-ui-primary: rgba(249, 249, 249, 1);
 
 	--dim-text-primary: rgba(33, 47, 61, 0.3);
 }

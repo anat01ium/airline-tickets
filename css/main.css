@@ -431,3 +431,50 @@ button, select, input[type="button"] {
 	background-color: var(--color-accent-primary);
 	box-shadow: 0 1px 3px #00000040;
 }
+
+/* MAIN ----------------------------------------------------------------------*/
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 32.1%;
+	gap: 2rem;
+}
+
+.section__title {
+	margin-bottom: 1em;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--color-text-primary);
+}
+
+.routes {
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	padding: 0;
+	overflow: hidden;
+}
+
+.routes__item:not(:nth-child(5n + 1)) {
+	border-top: 1px solid var(--color-border-secondary);
+}
+
+.route-button {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	font-size: 1.6rem;
+	font-weight: 400;
+	padding: 1.75em 1.25em;
+	color: var(--color-text-primary);
+}
+
+.route-button:hover {
+	background-color: var(--dim-ui-primary);
+}
+
+.route-button__price {
+	color: var(--color-accent-primary);
+	fill: var(--color-accent-primary);
+}
