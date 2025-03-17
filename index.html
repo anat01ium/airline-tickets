@@ -405,28 +405,32 @@
 			</div>
 		</section>
 
-		<section class="section questions">
-			<h2 class="section__title">Частые вопросы</h2>
+		<section class="items-group">
+			<section class="section questions">
+				<h2 class="section__title">Частые вопросы</h2>
 
-			<ul class="card card-list">
-				<li class="card-list__item"><a class="card-list__link" href="#">Как забронировать авиабилет</a></li>
-				<li class="card-list__item"><a class="card-list__link" href="#">Как оплатить авиабилет</a></li>
-				<li class="card-list__item"><a class="card-list__link" href="#">Как зарегистрироваться на рейс</a></li>
-				<li class="card-list__item"><a class="card-list__link" href="#">Как вернуть авиабилет</a></li>
-				<li class="card-list__item"><a class="card-list__link" href="#">Бонусная программа</a></li>
-				<li class="card-list__item"><a class="card-list__link" href="#">Все темы</a></li>
-			</ul>
-		</section>
+				<ul class="card card-list">
+					<li class="card-list__item"><a class="card-list__link" href="#">Как забронировать авиабилет</a></li>
+					<li class="card-list__item"><a class="card-list__link" href="#">Как оплатить авиабилет</a></li>
+					<li class="card-list__item"><a class="card-list__link" href="#">Как зарегистрироваться на рейс</a></li>
+					<li class="card-list__item"><a class="card-list__link" href="#">Как вернуть авиабилет</a></li>
+					<li class="card-list__item"><a class="card-list__link" href="#">Бонусная программа</a></li>
+					<li class="card-list__item"><a class="card-list__link" href="#">Все темы</a></li>
+				</ul>
+			</section>
 
-		<section class="subscribe">
-			<h2 class="subcribe__title">Лучшие предложения для путешествий</h2>
+			<section class="subscribe card">
+				<h2 class="subscribe__title">Лучшие предложения для путешествий</h2>
 
-			<form class="subcribe-form">
-				<label class="subscribe-form__label" for="subscribe-email">Email</label>
-				<input class="subscribe-form__input" id="subscribe-email" type="email">
+				<form class="subscribe-form">
+					<div class="subscribe-form__input-box">
+						<input class="subscribe-form__input" id="subscribe-email" type="email" placeholder=" " required>
+						<label class="subscribe-form__label" for="subscribe-email">Email<span class="subscribe-form__label-required">*</span></label>
+					</div>
 
-				<button class="subscribe-form__button" type="submit">Подписаться</button>
-			</form>
+					<button class="subscribe-form__button" type="submit">Подписаться</button>
+				</form>
+			</section>
 		</section>
 	</main>
 
