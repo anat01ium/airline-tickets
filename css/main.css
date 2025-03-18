@@ -474,6 +474,7 @@ button, select, input[type="button"] {
 	display: grid;
 	grid-template-columns: 1fr 32.1%;
 	gap: 3rem 2rem;
+	padding-bottom: 8rem;
 }
 
 .routes {
@@ -669,4 +670,137 @@ button, select, input[type="button"] {
 	mask-size: 100%;
 	background-color: var(--color-ui-primary);
 	transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+/* FOOTER --------------------------------------------------------------------*/
+
+.footer {
+	background-color: var(--color-ui-primary);
+}
+
+.partners {
+	display: flex;
+	justify-content: space-between;
+}
+
+.chart {
+	display: flex;
+	justify-content: space-between;
+	padding: 3.6rem 0 2.65rem 0;
+	gap: 2rem;
+}
+
+.chart__item {
+	display: flex;
+	flex-direction: column;
+	width: 16.6667%;
+	gap: 1.7rem;
+	overflow: hidden;
+}
+
+.chart__title {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--color-text-primary);
+}
+
+.chart-list {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	gap: 1.05rem;
+}
+
+.chart-list__link {
+    display: inline-block;
+    width: 100%;
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: var(--color-text-primary);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.chart-list__link:hover {
+	text-decoration: underline;
+}
+
+.chart__link {
+	font-size: 1.4rem;
+	color: var(--color-text-link);
+}
+
+.chart__link::after {
+	content: " 🠒";
+}
+
+.chart__link:hover {
+	text-decoration: underline;
+}
+
+.contacts {
+	display: flex;
+	padding: 3.2rem 0;
+	border-top: 1px solid var(--color-border-primary);
+}
+
+.partner-link {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid var(--color-text-link);
+	border-radius: 0.4rem;
+	margin: 0 1rem;
+	padding: 0 2rem;
+	font-size: 1.4rem;
+	color: var(--color-text-link);
+}
+
+.partner-link:hover {
+	color: var(--color-ui-primary);
+	background-color: var(--color-text-link);
+}
+
+.apps {
+	display: flex;
+	gap: 1rem;
+	margin: 0 1rem;
+}
+
+.apps__link {
+	display: inline-flex;
+}
+
+.apps__link:hover {
+	transform: translateY(-2px);
+}
+
+.social {
+	display: flex;
+	margin-left: auto;
+	gap: 1rem;
+}
+
+.social__item {
+	display: inline-flex;
+}
+
+.social__link {
+	display: inline-flex;
+}
+
+.social__img {
+	fill: var(--color-ui-tertiary);
+}
+
+.social__img--fb:hover {
+	fill: rgb(24, 119, 242);
+}
+
+.social__img--instagram:hover {
+	fill: rgb(195, 42, 163);
+}
+
+.social__img--telegram:hover {
+	fill: rgb(0, 136, 204);
 }
