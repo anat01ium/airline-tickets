@@ -14,9 +14,11 @@
 	<header class="header">
 		<div class="container">
 			<nav class="nav">
-				<a class="logo" href="./">
-					<img class="logo__img" width="120" height="36" src="./assets/svg/tickets-slogan.svg" alt="Logo">
-				</a>
+				<div class="logo">
+					<a class="logo__link" href="./">
+						<img class="logo__img" width="120" height="36" src="./assets/svg/tickets-slogan.svg" alt="Logo">
+					</a>
+				</div>
 
 				<ul class="menu">
 					<li class="menu__item">
@@ -65,10 +67,55 @@
 				</ul>
 
 				<div class="lang">
-					<select class="lang__select">
-						<option class="lang__item" value="ru">Русский</option>
-						<option class="lang__item" value="en">English</option>
-					</select>
+					<button class="lang__button" type="button">Русский</button>
+				</div>
+
+				<div class="burger">
+					<button class="burger__button" type="button" popovertarget="burger-menu">Меню</button>
+
+					<div class="burger-menu" id="burger-menu" popover>
+						<div class="burger-menu__header">
+							<button class="burger-menu__button" popovertarget="burger-menu">Закрыть</button>
+						</div>
+
+						<h2 class="burger-menu__title">Сервисы</h2>
+						<ul class="burger-menu-list">
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link burger-menu-list__link--active">Авиабилеты</a>
+							</li>
+
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Ж/д билеты</a>
+							</li>
+
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Автобусы</a>
+							</li>
+
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Отели</a>
+							</li>
+
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Страхование</a>
+							</li>
+						</ul>
+
+						<h2 class="burger-menu__title">Справка</h2>
+						<ul class="burger-menu-list">
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Частые вопросы (FAQ)</a>
+							</li>
+
+							<li class="burger-menu-list__item">
+								<a href="#" class="burger-menu-list__link">Техничексая справка</a>
+							</li>
+						</ul>
+
+						<div class="burger-menu__separator"></div>
+
+						<a class="burger-menu__link" href="#">Корпоративным клиентам</a>
+					</div>
 				</div>
 			</nav>
 
@@ -110,7 +157,7 @@
 						</button>
 					</div>
 
-					<button class="search__input-box search__passangers-class-button" type="button">
+					<button class="search__input-box search__passangers-button" type="button">
 						<span class="search__input">1 пассажир, любой</span>
 						<span class="search__label">Пассажиры, класс</span>
 					</button>
