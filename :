@@ -1,0 +1,11 @@
+style: make ticket type buttons horizontal scrollable on small mobile screens
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Mar 25 21:21:12 2025 +0300
+#
+# On branch css-styling
+# Changes to be committed:
+#	modified:   css/main.css
+#

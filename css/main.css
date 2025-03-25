@@ -61,17 +61,19 @@ button, select, input[type="button"] {
 
 .card-list {
 	display: flex;
-	gap: 1.44em;
+	gap: 0.94em;
 	flex-direction: column;
 }
 
 .card-list__item {
 	display: flex;
+	align-items: center;
 	font-size: 1.4rem;
 }
 
 .card-list__link {
 	color: var(--color-text-link);
+	line-height: 1.5;
 }
 
 .card-list__link:hover {
@@ -766,11 +768,11 @@ body:has(.burger-menu:popover-open) {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
+	padding-left: 3em;
 }
 
 .airlines__rating::before {
 	position: absolute;
-	left: 0;
 	height: 1.143em;
 	width: 1.143em;
 	margin-left: -1.9em;
