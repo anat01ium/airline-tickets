@@ -936,36 +936,84 @@ body:has(.burger-menu:popover-open) {
 }
 
 .chart {
-	display: flex;
-	justify-content: space-between;
-	padding: 3.6rem 0 2.65rem 0;
-	gap: 2rem;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	margin: 2.2rem 0 2.65rem 0;
+	gap: 3rem 2rem;
+
+	@media screen and (width < 1000px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media screen and (width < 620px) {
+		grid-template-columns: 1fr;
+		gap: 1px;
+		padding: 1px 0;
+		margin: 2.2rem -0.8rem 0 -0.8rem;
+		background-color: var(--color-border-primary);
+	}
 }
 
 .chart__item {
 	display: flex;
 	flex-direction: column;
-	width: 16.6667%;
-	gap: 1.7rem;
 	overflow: hidden;
+	background-color: var(--color-ui-primary);
+
+	@media screen and (width < 620px) {
+		padding: 0 0.8rem;
+	}
 }
 
 .chart__title {
+	position: relative;
+	padding: 0.929em 0;
 	font-size: 1.4rem;
 	font-weight: 700;
 	color: var(--color-text-primary);
+
+	@media screen and (width < 620px) {
+		cursor: pointer;
+	}
+}
+
+.chart__title::after {
+	@media screen and (width < 620px) {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		content: "";
+		display: block;
+		width: 1rem;
+		height: 1rem;
+		border: 2px solid var(--color-border-primary);
+		border-left: none;
+		border-top: none;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+}
+
+.chart__content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 0.5rem;
+
+	@media screen and (width < 620px) {
+		display: none;
+	}
 }
 
 .chart-list {
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
-	gap: 1.05rem;
+	gap: 1rem;
 }
 
 .chart-list__link {
-    display: inline-block;
-    width: 100%;
+	display: inline-block;
+	width: 100%;
 	font-size: 1.4rem;
 	font-weight: 400;
 	color: var(--color-text-primary);
@@ -979,6 +1027,8 @@ body:has(.burger-menu:popover-open) {
 }
 
 .chart__link {
+	display: block;
+	margin-top: 1.7rem;
 	font-size: 1.4rem;
 	color: var(--color-text-link);
 }
@@ -1000,6 +1050,10 @@ body:has(.burger-menu:popover-open) {
 		flex-direction: column;
 		align-items: center;
 		gap: 2.4rem;
+	}
+
+	@media screen and (width < 620px) {
+		border-top: none;
 	}
 }
 
