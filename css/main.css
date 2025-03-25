@@ -45,6 +45,7 @@ button, select, input[type="button"] {
 	margin-bottom: 1em;
 	font-size: 1.8rem;
 	font-weight: 600;
+	line-height: 1.5;
 	color: var(--color-text-primary);
 }
 
@@ -275,6 +276,7 @@ body:has(.burger-menu:popover-open) {
 	margin-bottom: 1em;
 	font-size: 4rem;
 	font-weight: 600;
+	line-height: 1.2;
 	color: var(--color-accent-secondary);
 
 	@media screen and (width <= 1000px) {
@@ -541,6 +543,10 @@ body:has(.burger-menu:popover-open) {
 	gap: 2rem;
 }
 
+.banners.container {
+	padding-bottom: 1rem;
+}
+
 .banner {
 	display: flex;
 	flex-grow: 1;
@@ -664,7 +670,7 @@ body:has(.burger-menu:popover-open) {
 .main {
 	display: grid;
 	grid-template-columns: 1fr 32.1%;
-	gap: 3rem 2rem;
+	gap: 2rem;
 	padding-bottom: 8rem;
 
 	@media screen and (width < 1200px) {
@@ -1040,7 +1046,7 @@ body:has(.burger-menu:popover-open) {
 }
 
 .chart__link::after {
-	content: " 🠒";
+	content: " →";
 }
 
 .chart__link:hover {
