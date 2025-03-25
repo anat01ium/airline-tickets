@@ -271,7 +271,13 @@ body:has(.burger-menu:popover-open) {
 .slogan {
 	margin-top: 1.25em;
 	margin-bottom: 1em;
+	font-size: 4rem;
+	font-weight: 600;
 	color: var(--color-accent-secondary);
+
+	@media screen and (width <= 1000px) {
+		font-size: 2.8rem;
+	}
 }
 
 .ticket-type {
@@ -289,6 +295,7 @@ body:has(.burger-menu:popover-open) {
 	background-color: var(--color-brand-secondary);
 	color: var(--color-ui-primary);
 	border-radius: 2.462em;
+	white-space: nowrap
 }
 
 .ticket-type__link:hover {
@@ -316,44 +323,85 @@ body:has(.burger-menu:popover-open) {
 
 .search {
 	display: grid;
-	margin-top: 1em;
-	margin-bottom: 5em;
-	grid-template-columns: auto 138px;
+	margin-top: 1.6rem;
+	margin-bottom: 8rem;
+	grid-template-columns: auto 13.8rem;
 	gap: 1.6rem 1rem;
 	font-size: 1.6rem;
+
+	@media screen and (width < 1200px) {
+		grid-template-columns: auto 32%;
+		margin-bottom: 3.2rem;
+	}
+
+	@media screen and (width < 720px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .search__filters {
-	display: flex;
-	background-color: var(--color-ui-primary);
+	display: grid;
+	grid-template-columns: 2fr 1.16fr 0.84fr;
+	gap: 1px;
 	border-radius: 0.25em;
+	background-color: var(--color-border-primary);
 	box-shadow: 0 2px 16px #00000040;
-}
+	overflow: hidden;
 
-.search__filters > :not(:first-child),
-.search__route > .search__input-box + .search__input-box {
-	border-left: 1px solid var(--color-border-primary);
+	@media screen and (width < 1200px) {
+		grid-column: 1 / -1;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media screen and (width < 720px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .search__route {
 	position: relative;
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1px;
+
+	@media screen and (width < 1200px) {
+		grid-column: 1 / -1;
+	}
+
+	@media screen and (width < 720px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .search__input-box {
 	position: relative;
+	flex-grow: 1;
+	height: 8rem;
+	background-color: var(--color-ui-primary);
+
+	@media screen and (width < 1200px) {
+		height: 7.2rem;
+	}
+
+	@media screen and (width < 720px) {
+		height: 6.4rem;
+	}
 }
 
 .search__label {
 	position: absolute;
 	left: 1.25em;
-	top: 2em;
+	top: 50%;
 	color: var(--color-text-tertiary);
+	transform: translateY(-50%);
 }
 
 .search__input {
-	display: block;
-	padding: 2.375em 1.25em 1.25em 1.25em;
+	display: inline-flex;
+	align-items: center;
+	padding: 1.25em 1.25em 0 1.25em;
+	height: 100%;
+	width: 100%;
 	font-size: 1.6rem;
 	font-weight: 600;
 	text-align: start;
@@ -365,7 +413,7 @@ body:has(.burger-menu:popover-open) {
 .search__input:not(:placeholder-shown) + .search__label {
 	left: 1.539em;
 	font-size: 1.3rem;
-	transform: translateY(-5px);
+	transform: translateY(-1.5em);
 }
 
 .search__swap-route-button {
@@ -379,6 +427,12 @@ body:has(.burger-menu:popover-open) {
 	font-size: 0;
 	background-color: var(--color-ui-primary);
 	transform: translate(-50%, -50%);
+
+	@media screen and (width < 720px) {
+		left: auto;
+		right: 0.5rem;
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
 }
 
 .search__swap-route-button:hover {
@@ -403,7 +457,6 @@ body:has(.burger-menu:popover-open) {
 
 .search__dates {
 	display: flex;
-	flex-grow: 1;
 }
 
 .search__dates > * {
@@ -433,16 +486,22 @@ body:has(.burger-menu:popover-open) {
 	transform: translateY(-50%);
 }
 
-.search__passangers-button {
-	padding-right: 1.1em;
-}
-
 .search__find-button {
 	font-weight: 700;
 	color: var(--color-ui-primary);
 	background-color: var(--color-accent-primary);
 	border-radius: 0.25em;
 	box-shadow: 0 2px 16px #00000040;
+
+	@media screen and (width < 1200px) {
+		grid-area: 2 / 2 / 3 / 3;
+		height: 7.2rem;
+	}
+
+	@media screen and (width < 720px) {
+		grid-area: initial;
+		height: 6.4rem;
+	}
 }
 
 .search__find-button:hover {
@@ -451,6 +510,7 @@ body:has(.burger-menu:popover-open) {
 
 .search__route-mode-button {
 	position: relative;
+	display: inline-flex;
 	justify-self: start;
 	padding: 0.357em 0 0.357em 2.4em;
 	font-size: 1.4rem;
