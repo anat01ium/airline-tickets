@@ -283,6 +283,10 @@ body:has(.burger-menu:popover-open) {
 .ticket-type {
 	display: flex;
 	gap: 0.78em;
+	margin: 0 -1.6rem;
+	padding: 0 1.6rem;
+	overflow-y: hidden;
+	scrollbar-width: none;
 }
 
 .ticket-type__link {
