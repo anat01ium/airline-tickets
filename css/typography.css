@@ -1,0 +1,43 @@
+@font-face {
+	font-family: "Open Sans";
+	src: url("../assets/fonts/OpenSans-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../assets/fonts/OpenSans-SemiBold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Open Sans";
+	src: url("../assets/fonts/OpenSans-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+
+:root {
+	--font-family: "Open Sans", sans-serif;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 1.6rem;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+}
